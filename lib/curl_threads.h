@@ -42,7 +42,7 @@
       (defined(__MINGW32__) && !defined(__MINGW64_VERSION_MAJOR))
 #    define Curl_mutex_init(m)   InitializeCriticalSection(m)
 #  else
-#    define Curl_mutex_init(m)   InitializeCriticalSectionEx(m, 0, 1)
+#    define Curl_mutex_init(m)   InitializeCriticalSection(m)
 #  endif
 #  define Curl_mutex_acquire(m)  EnterCriticalSection(m)
 #  define Curl_mutex_release(m)  LeaveCriticalSection(m)
